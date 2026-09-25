@@ -58,7 +58,7 @@ public class StudentService {
         if(marks == null || marks.length == 0) {
             return 'F';
         }
-        int average = (int) calculateAverage(student);
+        int average = (int) calculateAverage(marks);
         if (average >= 90) {
             return 'A';
         } else if (average >= 80) {
@@ -78,7 +78,7 @@ public class StudentService {
         if(marks == null || marks.length == 0) {
             return "Fail";
         }
-        int average = (int) calculateAverage(student);
+        int average = (int) calculateAverage(marks);
         if (average >= 40) {
             return "Pass";
         } else {
@@ -86,15 +86,15 @@ public class StudentService {
         }
     }
 
-    public void displayReporCard(Student student) {
+    public void displayReportCard(Student student) {
         System.out.println("Student ID: " + student.getStudentid());
         System.out.println("Student Name: " + student.getStudentname());
         System.out.println("Student Age: " + student.getStudentage());
         System.out.println("Department: " + student.getDepartment());
-        System.out.println("Total Marks: " + calculateTotal(student));
-        System.out.println("Average Marks: " + calculateAverage(student));
-        System.out.println("Maximum Marks: " + findMax(student));
-        System.out.println("Minimum Marks: " + findMin(student));
+        System.out.println("Total Marks: " + calculateTotal(student.getMarks()));
+        System.out.println("Average Marks: " + calculateAverage(student.getMarks()));
+        System.out.println("Maximum Marks: " + findMax(student.getMarks()));
+        System.out.println("Minimum Marks: " + findMin(student.getMarks()));
         System.out.println("Grade: " + grade(student));
         System.out.println("Result: " + passOrFail(student));
     }

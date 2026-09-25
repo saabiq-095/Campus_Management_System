@@ -75,10 +75,9 @@ public class Student {
         System.out.println("Student Name: " + studentname);
         System.out.println("Student Age: " + studentage);
         System.out.println("Department: " + department);
-        System.out.print("Marks: ");
     }
 
-    public void displaystudentInfo(boolean showMarks) {
+    public void displayStudentInfo(boolean showMarks) {
         displayStudentInfo();
 
         if(showMarks) {
